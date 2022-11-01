@@ -76,7 +76,10 @@ It is basically the exact opposite of the previous test. Your job is to define a
 class method on `Dog` that will execute the correct SQL to drop a dogs table.
 
 ### `#save`
-
+  def self.create(name:, breed:)
+     dog = Dog.new(name: name, breed: breed)
+     Dog.save
+      end
 This spec ensures that given an instance of a dog, simply calling `save` will
 insert a new record into the database and return the instance.
 
